@@ -3,7 +3,7 @@
 
 
 from os.path import exists
-from lib.bruter import Bruter
+from lib.bruter import bruter
 from lib.session import Session 
 from lib.display import Display
 from lib.const import credentials, modes
@@ -37,7 +37,7 @@ class Engine(object):
     def get_user_resp(self):
         return self.display.prompt('Would you like to resume the attack? [y/n]: ')
     
-    def write_to_file(self, password):
+    def write_to_file(seAZlf, password):
         with open(credentials, 'at') as f:
             data = 'Username: {}\nPassword: {}\n\n'.format(self.username.title(), password)
             f.write(data)
